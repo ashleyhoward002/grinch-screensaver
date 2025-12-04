@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrinchMode Screensaver</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
+      
+      body {
+        font-family: 'Rubik', sans-serif;
+        background-color: #0f172a;
+        color: white;
+        overflow: hidden;
+      }
+      
+      .font-christmas {
+        font-family: 'Mountains of Christmas', cursive;
+      }
+
+      .grinch-gradient {
+        background: linear-gradient(135deg, #1a2e05 0%, #000000 100%);
+      }
+
+      /* Custom scrollbar to hide it mostly */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+
+      @keyframes fadeBounce {
+        0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+        50% { transform: translateY(-5px) scale(1.02); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      
+      .animate-fade-bounce {
+        animation: fadeBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
